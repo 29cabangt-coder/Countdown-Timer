@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#172554">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="timer" aria-labelledby="page-title">
+      <h1 id="page-title">Countdown timer</h1>
+      <p class="intro">Set a time, then start your countdown.</p>
+
+      <form id="timer-form">
+        <div class="time-inputs">
+          <label>
+            Minutes
+            <input id="minutes" name="minutes" type="number" min="0" max="999" value="5" inputmode="numeric">
+          </label>
+          <span class="time-separator" aria-hidden="true">:</span>
+          <label>
+            Seconds
+            <input id="seconds" name="seconds" type="number" min="0" max="59" value="0" inputmode="numeric">
+          </label>
+        </div>
+
+        <p id="time-display" class="time-display" role="timer" aria-label="Time remaining">05:00</p>
+        <p id="timer-message" class="message" role="status" aria-live="polite">Ready when you are.</p>
+
+        <div class="controls">
+          <button id="start-pause" class="primary" type="submit">Start</button>
+          <button id="reset" type="button">Reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
